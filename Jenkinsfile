@@ -8,10 +8,10 @@ notifyStarted()
     shortCommit = gitCommit.take(6)
 
     stage 'Pack'
-    sh "docker build -t innroad-docker.jfrog.io/devops-logging/spin_demo:${shortCommit} ."
+    sh "docker build -t innroad-docker.jfrog.io/spin-demo:${shortCommit} ."
 
     stage 'Publish'
-    sh "docker push innroad-docker.jfrog.io/devops-logging/spin_demo:${shortCommit}"
+    sh "docker push innroad-docker.jfrog.io/spin-demo:${shortCommit}"
 
 notifySuccessful()
 
